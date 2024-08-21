@@ -1,7 +1,26 @@
-import React from 'react'
+import React from 'react';
 
-export const CaptionGenerator = () => {
+const CaptionGenerator = ({ image, setCaption }) => {
+  const handleGenerateCaption = async () => {
+    if (image) {
+      try {
+        //Dummy API response
+        const dummyCaption = "This is a dummy caption for the uploaded image.";
+        setCaption(dummyCaption);  // Update dummy response
+      } catch (error) {
+        console.error('Error generating caption:', error);
+        setCaption("Error generating caption. Please try again.");  // Handle errors
+      }
+    } else {
+      setCaption("Please upload an image first.");
+    }
+  };
+
   return (
-    <div>CaptionGenerator</div>
-  )
-}
+    <button className='generator-button' onClick={handleGenerateCaption}>
+      Generate Caption
+    </button>
+  );
+};
+
+export default CaptionGenerator;

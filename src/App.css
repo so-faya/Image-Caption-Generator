@@ -26,6 +26,13 @@ input[type="file"]::-webkit-file-upload-button ,.generator-button{
   padding: 1rem 1rem;
   background-color: gold;
   border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+input[type="file"]::-webkit-file-upload-button:hover, .generator-button:hover  {
+  background-color: #f4c542; 
+  transform: scale(1.05); 
 }
 /* Bouncing Balls */
 .bouncing-ball {
