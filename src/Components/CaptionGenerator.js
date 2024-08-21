@@ -4,9 +4,9 @@ const CaptionGenerator = ({ image, setCaption }) => {
   const handleGenerateCaption = async () => {
     if (image) {
       try {
-        //Dummy API response
+        // Dummy API response
         const dummyCaption = "This is a dummy caption for the uploaded image.";
-        setCaption(dummyCaption);  // Update dummy response
+        setCaption(dummyCaption);  // Update caption with dummy response
       } catch (error) {
         console.error('Error generating caption:', error);
         setCaption("Error generating caption. Please try again.");  // Handle errors

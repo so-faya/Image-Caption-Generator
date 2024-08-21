@@ -9,8 +9,7 @@ const CaptionFeature = () => {
 
   // Function to handle setting the image from ImageUploader
   const handleImageUpload = (file) => {
-    setImage(file);
-    setCaption("this is a dummy caption.")
+    setImage(file);  // Update the image state
   };
 
   return (
@@ -33,7 +32,7 @@ const CaptionFeature = () => {
           <ImageUploader setImage={handleImageUpload} />
           <CaptionGenerator image={image} setCaption={setCaption} />
         </div>
-        <div className='display-field'>{caption}</div>  {/* Caption displayed here*/}
+        <div className='display-field'>{caption}</div>  {/* Caption displayed here */}
       </div>
     </div>
   );
