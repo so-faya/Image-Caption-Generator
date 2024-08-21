@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const ImageUploader = () => {
+function ImageUploader() {
+  const [image, setImage] = useState(null);
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      setImage(imageUrl);
+    }
+  };
+
   return (
-    <div>ImageUploader</div>
-  )
+    <div>
+      <input type="file" accept="image/*" onChange={handleImageUpload} />
+      
+    </div>
+  );
 }
 
-export default ImageUploader
+export default ImageUploader;

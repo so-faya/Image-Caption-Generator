@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageUploader from './ImageUploader';
 
 const CaptionFeature = () => {
   const balls = Array.from({ length: 100 });
@@ -20,7 +21,7 @@ const CaptionFeature = () => {
       <div className='capfeature-container'>
         <h1>Image Caption Generator</h1>
         <div className='function-buttons'>
-          <button className='upload-button'>Browse...</button>
+          <ImageUploader />
           <button className='generator-button'>Generate Caption</button>
         </div>
           <div className='display-field'>Display the Caption here ...</div>

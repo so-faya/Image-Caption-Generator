@@ -22,7 +22,7 @@
   justify-content: space-between;
   margin: 2rem 0;
 }
-.upload-button,.generator-button{
+input[type="file"]::-webkit-file-upload-button ,.generator-button{
   padding: 1rem 1rem;
   background-color: gold;
   border: none;
